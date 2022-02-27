@@ -1,0 +1,40 @@
+package com.signup;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class Demo {
+	
+	@Test
+	public void TC01() {
+		System.out.println("Exicuted TC01");
+	}
+	@Test
+	public void TC02() {
+		System.out.println("Exicuted TC02");
+	}
+	@Test(invocationCount=3)
+	public void TC03() {
+		System.out.println("Exicuted TC03");
+	}
+	@BeforeMethod
+	public void Login() {
+		System.out.println("Login Succ");
+	}
+	@AfterMethod
+	public void Logout() {
+		System.out.println("Logout Succ");
+	}
+	@BeforeClass
+	public void BroLunch() {
+		System.out.println("Browser Open");
+	}
+	@AfterClass
+	public void BroClose() {
+		System.out.println("Browser Close");
+	}
+
+}
